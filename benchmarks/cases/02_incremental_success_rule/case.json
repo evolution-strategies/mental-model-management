@@ -1,0 +1,19 @@
+{
+  "id": "02_incremental_success_rule",
+  "title": "Incremental integration of the 1/5 success rule",
+  "dimensions": ["incremental-learning", "retrieval", "non-duplication"],
+  "expected": {
+    "required_operations_any": ["Add", "Update"],
+    "min_changes": 1,
+    "max_changes": 3,
+    "min_new_files": 0,
+    "max_new_files": 1,
+    "required_terms_anywhere": ["1/5", "success rate"],
+    "max_pairwise_jaccard": 0.72,
+    "verification_status": ["pass", "corrected"]
+  },
+  "manual_review": [
+    "Is the specific rule kept distinct from the broader feedback principle?",
+    "Does the update avoid inventing an exact implementation schedule not present in the source?"
+  ]
+}

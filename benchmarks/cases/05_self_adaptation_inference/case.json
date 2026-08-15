@@ -1,0 +1,20 @@
+{
+  "id": "05_self_adaptation_inference",
+  "title": "Infer indirect adaptation from stored premises",
+  "dimensions": ["inference", "premise-tracking", "derived-knowledge"],
+  "expected": {
+    "required_operations_all": ["Infer"],
+    "min_changes": 1,
+    "max_changes": 4,
+    "min_new_files": 0,
+    "max_new_files": 1,
+    "required_headings_any": ["Premises", "Derived Knowledge"],
+    "required_terms_anywhere": ["indirect", "selection"],
+    "max_pairwise_jaccard": 0.78,
+    "verification_status": ["pass", "corrected"]
+  },
+  "manual_review": [
+    "Does every derived claim follow from named premises?",
+    "Are probabilistic evolutionary consequences expressed without certainty inflation?"
+  ]
+}

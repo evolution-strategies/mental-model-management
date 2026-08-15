@@ -1,0 +1,17 @@
+{
+  "id": "03_redundant_paraphrase",
+  "title": "Do not duplicate an already represented paraphrase",
+  "dimensions": ["redundancy", "memory-stability"],
+  "expected": {
+    "min_changes": 0,
+    "max_changes": 1,
+    "min_new_files": 0,
+    "max_new_files": 0,
+    "max_pairwise_jaccard": 0.72,
+    "verification_status": ["not_needed", "pass", "corrected"]
+  },
+  "manual_review": [
+    "If a file changed, did the change improve precision rather than restate the same claim?",
+    "Did the system correctly avoid creating a Step Size alias file?"
+  ]
+}

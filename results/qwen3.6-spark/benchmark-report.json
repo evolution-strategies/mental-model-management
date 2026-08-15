@@ -1,0 +1,717 @@
+{
+  "benchmark": "3M behavioral benchmark",
+  "created_at": "2026-08-15T11:50:25.747178+00:00",
+  "model": "qwen3.6:latest",
+  "summary": {
+    "passed": 6,
+    "total": 6,
+    "rate": 1.0
+  },
+  "cases": [
+    {
+      "id": "01_cold_start_decomposition",
+      "title": "Cold-start decomposition of a multi-concept source",
+      "dimensions": [
+        "decomposition",
+        "gap-preservation",
+        "provenance",
+        "connections"
+      ],
+      "passed": true,
+      "checks": [
+        {
+          "name": "pipeline-prefix",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Add', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-gate",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Add', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-status",
+          "passed": true,
+          "detail": "status=pass, allowed=['pass', 'corrected']"
+        },
+        {
+          "name": "committed",
+          "passed": true,
+          "detail": "committed"
+        },
+        {
+          "name": "required-operations-all",
+          "passed": true,
+          "detail": "actual=['Add', 'Connect']"
+        },
+        {
+          "name": "change-count",
+          "passed": true,
+          "detail": "changed=3"
+        },
+        {
+          "name": "new-file-count",
+          "passed": true,
+          "detail": "new=['covariance-matrix-adaptation-in-evolution-strategies.md', 'population-dynamics-in-evolution-strategies.md', 'step-size-adaptation-in-evolution-strategies.md']"
+        },
+        {
+          "name": "heading-any:Knowledge Gaps",
+          "passed": true,
+          "detail": "changed=['covariance-matrix-adaptation-in-evolution-strategies.md', 'population-dynamics-in-evolution-strategies.md', 'step-size-adaptation-in-evolution-strategies.md']"
+        },
+        {
+          "name": "heading-any:Relations",
+          "passed": true,
+          "detail": "changed=['covariance-matrix-adaptation-in-evolution-strategies.md', 'population-dynamics-in-evolution-strategies.md', 'step-size-adaptation-in-evolution-strategies.md']"
+        },
+        {
+          "name": "heading-each-new:Provenance",
+          "passed": true,
+          "detail": "missing=[]"
+        },
+        {
+          "name": "term:covariance",
+          "passed": true,
+          "detail": "term='covariance'"
+        },
+        {
+          "name": "term:success",
+          "passed": true,
+          "detail": "term='success'"
+        },
+        {
+          "name": "term:noise",
+          "passed": true,
+          "detail": "term='noise'"
+        },
+        {
+          "name": "redundancy",
+          "passed": true,
+          "detail": "max=0.230, pair=['population-dynamics-in-evolution-strategies.md', 'step-size-adaptation-in-evolution-strategies.md'], allowed=0.680"
+        }
+      ],
+      "operations": [
+        "Add",
+        "Connect"
+      ],
+      "changed_files": [
+        "covariance-matrix-adaptation-in-evolution-strategies.md",
+        "population-dynamics-in-evolution-strategies.md",
+        "step-size-adaptation-in-evolution-strategies.md"
+      ],
+      "new_files": [
+        "covariance-matrix-adaptation-in-evolution-strategies.md",
+        "population-dynamics-in-evolution-strategies.md",
+        "step-size-adaptation-in-evolution-strategies.md"
+      ],
+      "manual_review": [
+        "Are independently useful concepts separated without fragmenting trivial details?",
+        "Are all claims traceable to the source rather than general ES knowledge?",
+        "Do relations connect models without creating a duplicate summary model?"
+      ],
+      "trace": [
+        {
+          "operator": "Extract",
+          "summary": "Extraction of Evolution Strategies (ES) mechanisms, focusing on step-size adaptation, population structures, and covariance modeling.",
+          "writes": []
+        },
+        {
+          "operator": "Retrieve",
+          "summary": "No relevant files found in CURRENT MARKDOWN MEMORY as it is empty.",
+          "writes": []
+        },
+        {
+          "operator": "Add",
+          "summary": "Added three new mental models for Evolution Strategies: Step-Size Adaptation, Covariance Matrix Adaptation, and Population Dynamics in ES. These files decompose the core mechanisms of mutation strength control, directional geometry learning, and selection strategies respectively, preserving unresolved questions regarding adaptation speed and noise robustness.",
+          "writes": [
+            "covariance-matrix-adaptation-in-evolution-strategies.md",
+            "population-dynamics-in-evolution-strategies.md",
+            "step-size-adaptation-in-evolution-strategies.md"
+          ]
+        },
+        {
+          "operator": "Connect",
+          "summary": "relations established",
+          "writes": [
+            "covariance-matrix-adaptation-in-evolution-strategies.md",
+            "population-dynamics-in-evolution-strategies.md",
+            "step-size-adaptation-in-evolution-strategies.md"
+          ]
+        },
+        {
+          "operator": "Verify",
+          "summary": "Verification passed. All staged files are supported by the input text and transient context. No contradictions, overstatements, or terminology errors detected. The decomposition of Evolution Strategies mechanisms is accurate and consistent with the source material.",
+          "writes": [],
+          "verification": {
+            "status": "pass",
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "02_incremental_success_rule",
+      "title": "Incremental integration of the 1/5 success rule",
+      "dimensions": [
+        "incremental-learning",
+        "retrieval",
+        "non-duplication"
+      ],
+      "passed": true,
+      "checks": [
+        {
+          "name": "pipeline-prefix",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Update', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-gate",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Update', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-status",
+          "passed": true,
+          "detail": "status=pass, allowed=['pass', 'corrected']"
+        },
+        {
+          "name": "committed",
+          "passed": true,
+          "detail": "committed"
+        },
+        {
+          "name": "required-operations-all",
+          "passed": true,
+          "detail": "actual=['Update', 'Connect']"
+        },
+        {
+          "name": "required-operations-any",
+          "passed": true,
+          "detail": "actual=['Update', 'Connect']"
+        },
+        {
+          "name": "change-count",
+          "passed": true,
+          "detail": "changed=3"
+        },
+        {
+          "name": "new-file-count",
+          "passed": true,
+          "detail": "new=['classical-1-5-success-rule.md']"
+        },
+        {
+          "name": "term:1/5",
+          "passed": true,
+          "detail": "term='1/5'"
+        },
+        {
+          "name": "term:success rate",
+          "passed": true,
+          "detail": "term='success rate'"
+        },
+        {
+          "name": "redundancy",
+          "passed": true,
+          "detail": "max=0.300, pair=['classical-1-5-success-rule.md', 'mutation-strength.md'], allowed=0.720"
+        }
+      ],
+      "operations": [
+        "Update",
+        "Connect"
+      ],
+      "changed_files": [
+        "classical-1-5-success-rule.md",
+        "evolution-strategy.md",
+        "mutation-strength.md"
+      ],
+      "new_files": [
+        "classical-1-5-success-rule.md"
+      ],
+      "manual_review": [
+        "Is the specific rule kept distinct from the broader feedback principle?",
+        "Does the update avoid inventing an exact implementation schedule not present in the source?"
+      ],
+      "trace": [
+        {
+          "operator": "Extract",
+          "summary": "Extraction of the Classical 1/5 Success Rule as a mechanism for adapting mutation strength in Evolution Strategies based on observed success rates.",
+          "writes": []
+        },
+        {
+          "operator": "Retrieve",
+          "summary": "The Classical 1/5 Success Rule directly addresses the adaptation of mutation strength in Evolution Strategies. The file 'evolution-strategy.md' provides the context for this mechanism, while 'mutation-strength.md' contains the specific knowledge gap regarding the target value for success-based adaptation, which is exactly what the 1/5 rule resolves.",
+          "writes": []
+        },
+        {
+          "operator": "Update",
+          "summary": "Added the 'Classical 1/5 Success Rule' as a new mental model file to resolve the knowledge gap in mutation-strength.md regarding the specific target for success-based adaptation. Updated mutation-strength.md to reference this rule and removed the unresolved gap.",
+          "writes": [
+            "classical-1-5-success-rule.md",
+            "mutation-strength.md"
+          ]
+        },
+        {
+          "operator": "Connect",
+          "summary": "Relations established between Classical 1/5 Success Rule, Evolution Strategy, and Mutation Strength.",
+          "writes": [
+            "classical-1-5-success-rule.md",
+            "evolution-strategy.md",
+            "mutation-strength.md"
+          ]
+        },
+        {
+          "operator": "Verify",
+          "summary": "Verification passed. All staged files are consistent with the source text and transient context. No contradictions, overstatements, or terminology errors detected.",
+          "writes": [],
+          "verification": {
+            "status": "pass",
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "03_redundant_paraphrase",
+      "title": "Do not duplicate an already represented paraphrase",
+      "dimensions": [
+        "redundancy",
+        "memory-stability"
+      ],
+      "passed": true,
+      "checks": [
+        {
+          "name": "pipeline-prefix",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Prune']"
+        },
+        {
+          "name": "verification-status",
+          "passed": true,
+          "detail": "status=not_needed, allowed=['not_needed', 'pass', 'corrected']"
+        },
+        {
+          "name": "committed",
+          "passed": true,
+          "detail": "committed"
+        },
+        {
+          "name": "required-operations-all",
+          "passed": true,
+          "detail": "actual=['Prune']"
+        },
+        {
+          "name": "change-count",
+          "passed": true,
+          "detail": "changed=0"
+        },
+        {
+          "name": "new-file-count",
+          "passed": true,
+          "detail": "new=[]"
+        },
+        {
+          "name": "redundancy",
+          "passed": true,
+          "detail": "max=0.000, pair=[], allowed=0.720"
+        }
+      ],
+      "operations": [
+        "Prune"
+      ],
+      "changed_files": [],
+      "new_files": [],
+      "manual_review": [
+        "If a file changed, did the change improve precision rather than restate the same claim?",
+        "Did the system correctly avoid creating a Step Size alias file?"
+      ],
+      "trace": [
+        {
+          "operator": "Extract",
+          "summary": "Extraction of the core concept 'Mutation Strength' (alias: Step Size) from the provided text, defining it as the parameter controlling the scale of stochastic mutations in candidate solutions.",
+          "writes": []
+        },
+        {
+          "operator": "Retrieve",
+          "summary": "The transient candidate 'Mutation Strength' (alias 'Step Size') is semantically identical to the existing file 'mutation-strength.md', which explicitly lists 'Step Size' as an alias and defines the same relationship between strength magnitude and mutation size.",
+          "writes": []
+        },
+        {
+          "operator": "Prune",
+          "summary": "The input text is a redundant paraphrase of the existing 'mutation-strength.md' file. The operator Prune removes the obsolete source content because it adds no new information and is fully subsumed by the canonical chunk. No writes are performed as the file already exists and contains the correct canonical definition.",
+          "writes": []
+        }
+      ]
+    },
+    {
+      "id": "04_conflict_contextualization",
+      "title": "Detect and repair an overgeneralized mutation-strength conflict",
+      "dimensions": [
+        "conflict-detection",
+        "conflict-repair",
+        "qualification"
+      ],
+      "passed": true,
+      "checks": [
+        {
+          "name": "pipeline-prefix",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Conflict Detection', 'Conflict Repair', 'Verify']"
+        },
+        {
+          "name": "verification-gate",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Conflict Detection', 'Conflict Repair', 'Verify']"
+        },
+        {
+          "name": "verification-status",
+          "passed": true,
+          "detail": "status=pass, allowed=['pass', 'corrected']"
+        },
+        {
+          "name": "committed",
+          "passed": true,
+          "detail": "committed"
+        },
+        {
+          "name": "required-operations-all",
+          "passed": true,
+          "detail": "actual=['Conflict Detection', 'Conflict Repair']"
+        },
+        {
+          "name": "change-count",
+          "passed": true,
+          "detail": "changed=2"
+        },
+        {
+          "name": "new-file-count",
+          "passed": true,
+          "detail": "new=['conflict-detection.md']"
+        },
+        {
+          "name": "heading-any:Repair Audit",
+          "passed": true,
+          "detail": "changed=['conflict-detection.md', 'mutation-strength.md']"
+        },
+        {
+          "name": "term:overshoot",
+          "passed": true,
+          "detail": "term='overshoot'"
+        },
+        {
+          "name": "term:context",
+          "passed": true,
+          "detail": "term='context'"
+        },
+        {
+          "name": "redundancy",
+          "passed": true,
+          "detail": "max=0.219, pair=['conflict-detection.md', 'mutation-strength.md'], allowed=0.750"
+        }
+      ],
+      "operations": [
+        "Conflict Detection",
+        "Conflict Repair"
+      ],
+      "changed_files": [
+        "conflict-detection.md",
+        "mutation-strength.md"
+      ],
+      "new_files": [
+        "conflict-detection.md"
+      ],
+      "manual_review": [
+        "Does repair contextualize the claims instead of arbitrarily deleting one?",
+        "Is 'exploration scale' distinguished from optimization performance?"
+      ],
+      "trace": [
+        {
+          "operator": "Extract",
+          "summary": "Extraction of the relationship between mutation strength and optimization performance, highlighting the non-linear nature of this effect.",
+          "writes": []
+        },
+        {
+          "operator": "Retrieve",
+          "summary": "The source text directly contradicts the claim in mutation-strength.md that increasing mutation strength always improves performance. It provides the necessary nuance regarding overshooting and context-dependence.",
+          "writes": []
+        },
+        {
+          "operator": "Conflict Detection",
+          "summary": "conflicts found",
+          "writes": [
+            "conflict-detection.md"
+          ]
+        },
+        {
+          "operator": "Conflict Repair",
+          "summary": "Resolved the contradiction between the absolute claim that increasing mutation strength always improves optimization and the nuanced reality that excessive strength causes overshooting. The resolution qualifies the original claim by introducing context-dependence (search state and objective landscape) and distinguishing between exploration scale and optimization efficacy.",
+          "writes": [
+            "mutation-strength.md"
+          ]
+        },
+        {
+          "operator": "Verify",
+          "summary": "Verification passed. The staged files correctly reflect the source material and transient context. The conflict between the absolute claim in the old note and the nuanced reality is properly documented and resolved in `mutation-strength.md`, while `conflict-detection.md` accurately records the nature of this contradiction.",
+          "writes": [],
+          "verification": {
+            "status": "pass",
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "05_self_adaptation_inference",
+      "title": "Infer indirect adaptation from stored premises",
+      "dimensions": [
+        "inference",
+        "premise-tracking",
+        "derived-knowledge"
+      ],
+      "passed": true,
+      "checks": [
+        {
+          "name": "pipeline-prefix",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Infer', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-gate",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Infer', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-status",
+          "passed": true,
+          "detail": "status=pass, allowed=['pass', 'corrected']"
+        },
+        {
+          "name": "committed",
+          "passed": true,
+          "detail": "committed"
+        },
+        {
+          "name": "required-operations-all",
+          "passed": true,
+          "detail": "actual=['Infer', 'Connect']"
+        },
+        {
+          "name": "change-count",
+          "passed": true,
+          "detail": "changed=4"
+        },
+        {
+          "name": "new-file-count",
+          "passed": true,
+          "detail": "new=['self-adaptation.md']"
+        },
+        {
+          "name": "heading-any:Premises",
+          "passed": true,
+          "detail": "changed=['selection.md', 'self-adaptation.md', 'strategy-parameter-inheritance.md', 'strategy-parameter-variation.md']"
+        },
+        {
+          "name": "heading-any:Derived Knowledge",
+          "passed": true,
+          "detail": "changed=['selection.md', 'self-adaptation.md', 'strategy-parameter-inheritance.md', 'strategy-parameter-variation.md']"
+        },
+        {
+          "name": "term:indirect",
+          "passed": true,
+          "detail": "term='indirect'"
+        },
+        {
+          "name": "term:selection",
+          "passed": true,
+          "detail": "term='selection'"
+        },
+        {
+          "name": "redundancy",
+          "passed": true,
+          "detail": "max=0.417, pair=['strategy-parameter-inheritance.md', 'strategy-parameter-variation.md'], allowed=0.780"
+        }
+      ],
+      "operations": [
+        "Infer",
+        "Connect"
+      ],
+      "changed_files": [
+        "selection.md",
+        "self-adaptation.md",
+        "strategy-parameter-inheritance.md",
+        "strategy-parameter-variation.md"
+      ],
+      "new_files": [
+        "self-adaptation.md"
+      ],
+      "manual_review": [
+        "Does every derived claim follow from named premises?",
+        "Are probabilistic evolutionary consequences expressed without certainty inflation?"
+      ],
+      "trace": [
+        {
+          "operator": "Extract",
+          "summary": "Extraction of self-adaptation mechanics focusing on the inheritance and variation of strategy parameters alongside selection's role in fitness evaluation.",
+          "writes": []
+        },
+        {
+          "operator": "Retrieve",
+          "summary": "The transient extraction highlights three core mechanics of self-adaptation: inheritance of strategy parameters, variation via mutation, and selection based on fitness outcomes. The relevant files directly map to these extracted claims: 'strategy-parameter-inheritance.md' covers the association and inheritance of parameters; 'strategy-parameter-variation.md' covers the generation of different values via mutation; and 'selection.md' covers the favoring of offspring by fitness and the evaluation of outcomes rather than parameters directly.",
+          "writes": []
+        },
+        {
+          "operator": "Infer",
+          "summary": "Inference of the Self-Adaptation mechanism by combining premises on strategy parameter inheritance, mutation-based variation, and fitness-driven selection. The derived knowledge establishes that strategy parameters evolve indirectly through their impact on offspring fitness, rather than being selected directly.",
+          "writes": [
+            "self-adaptation.md"
+          ]
+        },
+        {
+          "operator": "Connect",
+          "summary": "Relations established between Selection, Self-Adaptation, Strategy Parameter Inheritance, and Strategy Parameter Variation.",
+          "writes": [
+            "selection.md",
+            "self-adaptation.md",
+            "strategy-parameter-inheritance.md",
+            "strategy-parameter-variation.md"
+          ]
+        },
+        {
+          "operator": "Verify",
+          "summary": "Verification passed. All staged files are consistent with the input facts and transient context. No overstatements or contradictions detected.",
+          "writes": [],
+          "verification": {
+            "status": "pass",
+            "issues": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "06_strategy_parameter_abstraction",
+      "title": "Abstract several adaptation mechanisms into a higher-level model",
+      "dimensions": [
+        "abstraction",
+        "hierarchy",
+        "instance-preservation"
+      ],
+      "passed": true,
+      "checks": [
+        {
+          "name": "pipeline-prefix",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Abstract', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-gate",
+          "passed": true,
+          "detail": "['Extract', 'Retrieve', 'Abstract', 'Connect', 'Verify']"
+        },
+        {
+          "name": "verification-status",
+          "passed": true,
+          "detail": "status=pass, allowed=['pass', 'corrected']"
+        },
+        {
+          "name": "committed",
+          "passed": true,
+          "detail": "committed"
+        },
+        {
+          "name": "required-operations-all",
+          "passed": true,
+          "detail": "actual=['Abstract', 'Connect']"
+        },
+        {
+          "name": "change-count",
+          "passed": true,
+          "detail": "changed=4"
+        },
+        {
+          "name": "new-file-count",
+          "passed": true,
+          "detail": "new=['strategy-parameter-adaptation.md']"
+        },
+        {
+          "name": "heading-any:Instances",
+          "passed": true,
+          "detail": "changed=['covariance-adaptation.md', 'mutation-strength-adaptation.md', 'population-size-adaptation.md', 'strategy-parameter-adaptation.md']"
+        },
+        {
+          "name": "term:mutation",
+          "passed": true,
+          "detail": "term='mutation'"
+        },
+        {
+          "name": "term:covariance",
+          "passed": true,
+          "detail": "term='covariance'"
+        },
+        {
+          "name": "term:population",
+          "passed": true,
+          "detail": "term='population'"
+        },
+        {
+          "name": "redundancy",
+          "passed": true,
+          "detail": "max=0.478, pair=['mutation-strength-adaptation.md', 'population-size-adaptation.md'], allowed=0.780"
+        }
+      ],
+      "operations": [
+        "Abstract",
+        "Connect"
+      ],
+      "changed_files": [
+        "covariance-adaptation.md",
+        "mutation-strength-adaptation.md",
+        "population-size-adaptation.md",
+        "strategy-parameter-adaptation.md"
+      ],
+      "new_files": [
+        "strategy-parameter-adaptation.md"
+      ],
+      "manual_review": [
+        "Does the abstraction preserve the three lower-level models as instances?",
+        "Is the abstraction broader without becoming a vague summary of Evolution Strategies?"
+      ],
+      "trace": [
+        {
+          "operator": "Extract",
+          "summary": "Extraction identifies 'strategy-parameter adaptation' as a higher-level abstraction encompassing covariance, mutation strength, and population size adaptations. It preserves the distinct mechanisms of each while establishing their shared role in controlling Evolution Strategy search parameters.",
+          "writes": []
+        },
+        {
+          "operator": "Retrieve",
+          "summary": "The extracted candidate 'Strategy-Parameter Adaptation' is a higher-level abstraction that encompasses the three existing mental models: Covariance Adaptation, Mutation Strength Adaptation, and Population Size Adaptation. These files are directly relevant as they represent the specific instances of the abstract concept identified in the source.",
+          "writes": []
+        },
+        {
+          "operator": "Abstract",
+          "summary": "Abstraction constructs the higher-level mental model 'Strategy-Parameter Adaptation' by identifying the shared structure among Covariance Adaptation, Mutation Strength Adaptation, and Population Size Adaptation. It retains the original specialized models as instances under an explicit section.",
+          "writes": [
+            "strategy-parameter-adaptation.md"
+          ]
+        },
+        {
+          "operator": "Connect",
+          "summary": "relations established",
+          "writes": [
+            "covariance-adaptation.md",
+            "mutation-strength-adaptation.md",
+            "population-size-adaptation.md",
+            "strategy-parameter-adaptation.md"
+          ]
+        },
+        {
+          "operator": "Verify",
+          "summary": "Verification passed. All staged files are consistent with the source material and transient context. The hierarchical relationship between 'Strategy-Parameter Adaptation' and its instances is correctly established without overstatement or contradiction.",
+          "writes": [],
+          "verification": {
+            "status": "pass",
+            "issues": []
+          }
+        }
+      ]
+    }
+  ]
+}

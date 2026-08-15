@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "3M: Mental Model Management in Markdown"
+type: software
+authors:
+  - family-names: "Kramer"
+    given-names: "Oliver"
+version: 0.1.0
+date-released: 2026-08-16
+repository-code: "https://github.com/evolution-strategies/mental-model-management"
+url: "https://github.com/evolution-strategies/mental-model-management"
+license: MIT
+

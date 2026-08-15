@@ -1,0 +1,22 @@
+{
+  "id": "01_cold_start_decomposition",
+  "title": "Cold-start decomposition of a multi-concept source",
+  "dimensions": ["decomposition", "gap-preservation", "provenance", "connections"],
+  "expected": {
+    "required_operations_all": ["Add", "Connect"],
+    "min_changes": 3,
+    "max_changes": 7,
+    "min_new_files": 3,
+    "max_new_files": 7,
+    "required_headings_any": ["Knowledge Gaps", "Relations"],
+    "required_headings_each_new": ["Provenance"],
+    "required_terms_anywhere": ["covariance", "success", "noise"],
+    "max_pairwise_jaccard": 0.68,
+    "verification_status": ["pass", "corrected"]
+  },
+  "manual_review": [
+    "Are independently useful concepts separated without fragmenting trivial details?",
+    "Are all claims traceable to the source rather than general ES knowledge?",
+    "Do relations connect models without creating a duplicate summary model?"
+  ]
+}
