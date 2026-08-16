@@ -1,4 +1,4 @@
-# 3M: Mental Model Management in Markdown
+# 3M: Mental Model Management: An Operator-Based Framework for LLM Memory
 
 A minimal reference implementation of **Mental Model Management (3M)** for large language models. Instead of storing a growing pile of passages, 3M maintains persistent, concept-centered Markdown models and asks how each model should change when new text arrives.
 
